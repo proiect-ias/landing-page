@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EMOTI</title>
+  <meta name="description" content="Emoti Journal – aplicație de Self‑Care cu Bullet Journal, Țeluri, Mood Diary și Happiness Tracker. Creează obiceiuri, urmărește starea și evoluează zilnic." />
+  <meta property="og:title" content="Emoti Journal — Self‑Care Bullet Journal" />
+  <meta property="og:description" content="Țeluri clare, dispoziție urmărită, obiceiuri consecvente. Un singur loc pentru binele tău." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Scrollbar subtilă pe desktop */
+    ::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-thumb{background:#e5e7eb;border-radius:9999px}
+  </style>
+</head>
+<body class="antialiased text-gray-900 bg-gradient-to-b from-white via-white to-gray-50">
+  <!-- Nav -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <img src="./logo.png" alt="Emoti Journal Logo" class="h-10 w-16" />
+      </a>
+      <!-- <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#features" class="hover:text-gray-700">Funcții</a>
+        <a href="#how" class="hover:text-gray-700">Cum funcționează</a>
+        <a href="#pricing" class="hover:text-gray-700">Planuri</a>
+        <a href="#faq" class="hover:text-gray-700">Întrebări</a>
+      </nav> -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#download" class="px-4 py-2 rounded-xl bg-[#FDCAFF] text-white text-sm hover:bg-pink-900">Descarcă gratuit</a>
+      </div>
+      <button aria-label="Open Menu" class="md:hidden p-2 rounded-lg border border-gray-200" onclick="document.getElementById('mnav').classList.toggle('hidden')">☰</button>
+    </div>
+    <div id="mnav" class="md:hidden hidden border-t border-gray-100">
+      <div class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#features" class="py-1">Funcții</a>
+        <a href="#how" class="py-1">Cum funcționează</a>
+        <a href="#pricing" class="py-1">Planuri</a>
+        <a href="#faq" class="py-1">Întrebări</a>
+        <div class="pt-2 flex gap-2">
+          <a href="#download" class="flex-1 px-4 py-2 rounded-xl border border-gray-200 text-center">Descarcă</a>
+          <a href="#cta" class="flex-1 px-4 py-2 rounded-xl bg-gray-900 text-white text-center">Gratuit</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-70 blur-3xl pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 h-[36rem] w-[36rem] rounded-full bg-gradient-to-tr from-rose-200 via-pink-100 to-purple-100"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-24 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.1]">
+          Self‑Care Bullet <span class="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-500">Journal</span>,
+          Mood Diary & Happiness Tracker
+        </h1>
+        <p class="mt-5 text-lg text-gray-600 max-w-prose">
+          Concentrează‑te pe ceea ce contează: notează rapid gândurile, setează obiective clare, urmărește starea și obiceiurile.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 items-start">
+  <!-- App Store -->
+  <a href="#" aria-label="Download on the App Store"
+     class="inline-flex items-center gap-3 rounded-[14px] bg-black text-white px-4 py-3 shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-black/40">
+    <!-- Apple logo -->
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="shrink-0">
+      <path d="M16.365 1.43c.02 1.2-.44 2.1-1.104 2.86-.666.76-1.796 1.35-2.896 1.25-.13-1.16.48-2.2 1.13-2.89.69-.74 1.9-1.3 2.87-1.22zM20.58 17.23c-.54 1.25-1.2 2.47-2.16 3.71-1.02 1.31-2.18 2.94-3.79 2.97-1.59.03-2.1-.96-3.92-.96-1.82 0-2.37.93-3.95.98-1.6.03-2.82-1.41-3.85-2.72-2.1-2.67-3.71-7.54-1.55-10.83 1.07-1.6 2.78-2.62 4.7-2.65 1.47-.03 2.85 1.01 3.92 1.01 1.06 0 2.88-1.26 4.86-1.08.83.03 3.15.33 4.64 2.5-3.93 2.11-3.3 7.63.98 7.97z"/>
+    </svg>
+    <div class="leading-tight">
+      <div class="text-[10px] uppercase tracking-wider">Download on the</div>
+      <div class="text-lg font-semibold -mt-0.5">App Store</div>
+    </div>
+  </a>
+
+  <!-- Google Play -->
+  <a href="#" aria-label="Get it on Google Play"
+     class="inline-flex items-center gap-3 rounded-[14px] bg-black text-white px-4 py-3 shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-black/40">
+    <!-- Google Play mark -->
+    <svg width="28" height="28" viewBox="0 0 512 512" class="shrink-0" aria-hidden="true">
+      <path fill="#34a853" d="M325.3 215.5 79.2 20.7C69.7 14.1 59.5 12 50.5 14.4l245.4 205.9 29.4-4.8z"/>
+      <path fill="#4285f4" d="M461.8 246.9c10.3 5.9 10.3 20.4 0 26.2L375 323.3 295.9 256 375 188.7l86.8 58.2z"/>
+      <path fill="#fbbc04" d="M50.5 497.6c9 .4 19.2-1.7 28.7-8.3l246.1-195.5-29.4-37.8L50.5 497.6z"/>
+      <path fill="#ea4335" d="M50.5 14.4c-6.7 1.8-12.6 6.1-16.8 12.8C29.6 36.2 28 45 28 55.4v401.2c0 10.4 1.6 19.2 5.7 28.2L295.9 256 50.5 14.4z"/>
+    </svg>
+    <div class="leading-tight">
+      <div class="text-[10px] uppercase tracking-wider">Download on the</div>
+      <div class="text-lg font-semibold -mt-0.5">Google Play</div>
+    </div>
+  </a>
+</div>
+
+    </div>
+
+      <!-- Mockup phone -->
+       <div class="relative mx-auto w-full max-w-[14rem] sm:max-w-[16rem] lg:max-w-[18rem]">
+            <div class="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-rose-200 to-purple-200 opacity-60 blur-2xl"></div>
+            <img
+                src="./mobile_app.png"
+                alt="EMOTI – ecran Home mockup"
+                class="w-full h-full object-cover"
+                loading="lazy"
+            />
+        </div>
+    </div>
+
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Tot ce ai nevoie într‑o singură aplicație</h2>
+        <p class="mt-3 text-gray-600">Bullet Journal inteligent, Țeluri cu milestone‑uri, Mood Diary zilnic și tracker pentru obiceiuri – toate conectate între ele.</p>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white shadow-sm">
+          <div class="h-10 w-10 rounded-xl bg-rose-100 text-rose-600 grid place-items-center">✍️</div>
+          <h3 class="mt-4 font-semibold">Bullet Journal</h3>
+          <p class="mt-2 text-sm text-gray-600">Note rapide, colecții, daily logs. Markdown ușor, etichete și căutare instant.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white shadow-sm">
+          <div class="h-10 w-10 rounded-xl bg-rose-100 text-rose-600 grid place-items-center">🎯</div>
+          <h3 class="mt-4 font-semibold">Țeluri & milestone‑uri</h3>
+          <p class="mt-2 text-sm text-gray-600">Definește obiective, sparge‑le în pași, urmărește progresul vizual.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white shadow-sm">
+          <div class="h-10 w-10 rounded-xl bg-rose-100 text-rose-600 grid place-items-center">😊</div>
+          <h3 class="mt-4 font-semibold">Mood Diary</h3>
+          <p class="mt-2 text-sm text-gray-600">Înregistrează emoții, triggeri și recunoștință. Trenduri săptămânale.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white shadow-sm">
+          <div class="h-10 w-10 rounded-xl bg-rose-100 text-rose-600 grid place-items-center">📈</div>
+          <h3 class="mt-4 font-semibold">Happiness Tracker</h3>
+          <p class="mt-2 text-sm text-gray-600">Corelează obiceiurile cu starea ta pentru insight‑uri acționabile.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white shadow-sm">
+          <div class="h-10 w-10 rounded-xl bg-rose-100 text-rose-600 grid place-items-center">🔔</div>
+          <h3 class="mt-4 font-semibold">Rutine & memento‑uri</h3>
+          <p class="mt-2 text-sm text-gray-600">Construiește ritualuri zilnice cu notificări inteligente.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white shadow-sm">
+          <div class="h-10 w-10 rounded-xl bg-rose-100 text-rose-600 grid place-items-center">🔒</div>
+          <h3 class="mt-4 font-semibold">Confidențialitate</h3>
+          <p class="mt-2 text-sm text-gray-600">Datele îți aparțin. Export oricând. Lock cu biometrie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-10 items-start">
+      <div class="lg:col-span-1">
+        <h2 class="text-3xl font-bold tracking-tight">Cum funcționează</h2>
+        <p class="mt-3 text-gray-600">Trei pași simpli pentru o rutină mai fericită.</p>
+      </div>
+      <div class="lg:col-span-2 grid sm:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-gray-50">
+          <div class="text-2xl">1</div>
+          <h3 class="mt-2 font-semibold">Notează zilnic</h3>
+          <p class="mt-2 text-sm text-gray-600">Jurnal, recunoștință, starea din prezent.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-gray-50">
+          <div class="text-2xl">2</div>
+          <h3 class="mt-2 font-semibold">Definește Țeluri</h3>
+          <p class="mt-2 text-sm text-gray-600">Alege 1–3 obiective și sparge‑le în pași.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-gray-50">
+          <div class="text-2xl">3</div>
+          <h3 class="mt-2 font-semibold">Urmărește progresul</h3>
+          <p class="mt-2 text-sm text-gray-600">Vezi legătura dintre obiceiuri și fericire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screens / Gallery -->
+  <section class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Ecrane curate, fără zgomot</h2>
+        <p class="mt-3 text-gray-600">Design minimal, focus pe ceea ce contează: claritate și consecvență.</p>
+      </div>
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="aspect-[9/16] rounded-2xl bg-gradient-to-b from-gray-100 to-gray-200 border border-gray-200"></div>
+        <div class="aspect-[9/16] rounded-2xl bg-gradient-to-b from-gray-100 to-gray-200 border border-gray-200"></div>
+        <div class="aspect-[9/16] rounded-2xl bg-gradient-to-b from-gray-100 to-gray-200 border border-gray-200"></div>
+        <div class="aspect-[9/16] rounded-2xl bg-gradient-to-b from-gray-100 to-gray-200 border border-gray-200"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Planuri simple</h2>
+        <p class="mt-3 text-gray-600">Începe gratuit. Upgrade doar dacă ai nevoie de mai mult.</p>
+      </div>
+      <div class="mt-12 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-8 bg-gray-50">
+          <h3 class="font-semibold">Free</h3>
+          <p class="mt-1 text-sm text-gray-600">Pentru început</p>
+          <p class="mt-6 text-3xl font-bold">0 RON<span class="text-base font-normal text-gray-500">/lună</span></p>
+          <ul class="mt-6 space-y-2 text-sm text-gray-700">
+            <li>• Bullet Journal & Mood Diary</li>
+            <li>• 5 obiceiuri active</li>
+            <li>• Export CSV</li>
+          </ul>
+          <a href="#cta" class="mt-8 inline-block px-4 py-2 rounded-xl bg-gray-900 text-white hover:bg-black">Începe gratuit</a>
+        </div>
+        <div class="rounded-2xl border-2 border-rose-300 p-8 bg-white shadow-lg">
+          <div class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded-full bg-rose-50 text-rose-700 ring-1 ring-rose-200">Recomandat</div>
+          <h3 class="mt-2 font-semibold">Pro</h3>
+          <p class="mt-1 text-sm text-gray-600">Pentru putere și flexibilitate</p>
+          <p class="mt-6 text-3xl font-bold">19 RON<span class="text-base font-normal text-gray-500">/lună</span></p>
+          <ul class="mt-6 space-y-2 text-sm text-gray-700">
+            <li>• Obiceiuri nelimitate & memento‑uri</li>
+            <li>• Rapoarte & corelări avansate</li>
+            <li>• Backup cifrat în cloud</li>
+          </ul>
+          <a href="#cta" class="mt-8 inline-block px-4 py-2 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white hover:opacity-90">Încearcă Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Întrebări frecvente</h2>
+        <p class="mt-3 text-gray-600">Dacă nu găsești răspunsul, scrie‑ne – revenim rapid.</p>
+      </div>
+      <div class="mt-12 grid md:grid-cols-2 gap-6">
+        <details class="group rounded-2xl border border-gray-200 p-6 bg-white open:shadow-sm">
+          <summary class="cursor-pointer font-semibold">Îmi pot exporta datele?</summary>
+          <p class="mt-2 text-sm text-gray-600">Da. CSV/JSON oricând, inclusiv pe planul Free.</p>
+        </details>
+        <details class="group rounded-2xl border border-gray-200 p-6 bg-white">
+          <summary class="cursor-pointer font-semibold">Funcționează offline?</summary>
+          <p class="mt-2 text-sm text-gray-600">Da, poți nota offline; sincronizarea se face când revii online.</p>
+        </details>
+        <details class="group rounded-2xl border border-gray-200 p-6 bg-white">
+          <summary class="cursor-pointer font-semibold">Sunt notificările personalizabile?</summary>
+          <p class="mt-2 text-sm text-gray-600">Poți alege ore, zile și ferestre silențioase.</p>
+        </details>
+        <details class="group rounded-2xl border border-gray-200 p-6 bg-white">
+          <summary class="cursor-pointer font-semibold">Cum îmi protejați datele?</summary>
+          <p class="mt-2 text-sm text-gray-600">Criptare la rest și în tranzit, lock cu biometrie, backup opțional.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Gata să începi o rutină mai fericită?</h2>
+      <p class="mt-3 text-gray-600">Descarcă aplicația și începe cu 3 minute pe zi. Consecvența bate motivația.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#" class="inline-flex items-center justify-center gap-3 rounded-xl bg-gray-900 text-white px-5 py-3 hover:bg-black">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6-6-3-6 3 1.5-6L3 8.5 9 8l3-6z" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span class="text-sm font-medium">iOS</span>
+        </a>
+        <a href="#" class="inline-flex items-center justify-center gap-3 rounded-xl border border-gray-200 px-5 py-3 hover:bg-gray-50">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.5"/><path d="M8 8h8v8H8z" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span class="text-sm font-medium">Android</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <p class="text-sm text-gray-500">© <span id="y"></span> Emoti Journal. Toate drepturile rezervate.</p>
+      <nav class="text-sm text-gray-600 flex items-center gap-4">
+        <a href="#" class="hover:text-gray-800">Politica de confidențialitate</a>
+        <a href="#" class="hover:text-gray-800">Termeni</a>
+        <a href="#" class="hover:text-gray-800">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
