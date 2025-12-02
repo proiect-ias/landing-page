@@ -64,38 +64,17 @@
         <p class="mt-5 text-lg text-gray-600 max-w-prose">
           Concentrează‑te pe ceea ce contează: notează rapid gândurile, setează obiective clare, urmărește starea și obiceiurile.
         </p>
-        <div class="mt-6 flex flex-col sm:flex-row gap-3 items-start">
-  <!-- App Store -->
-  <a href="#" aria-label="Download on the App Store"
-     class="inline-flex items-center gap-3 rounded-[14px] bg-black text-white px-4 py-3 shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-black/40">
-    <!-- Apple logo -->
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="shrink-0">
-      <path d="M16.365 1.43c.02 1.2-.44 2.1-1.104 2.86-.666.76-1.796 1.35-2.896 1.25-.13-1.16.48-2.2 1.13-2.89.69-.74 1.9-1.3 2.87-1.22zM20.58 17.23c-.54 1.25-1.2 2.47-2.16 3.71-1.02 1.31-2.18 2.94-3.79 2.97-1.59.03-2.1-.96-3.92-.96-1.82 0-2.37.93-3.95.98-1.6.03-2.82-1.41-3.85-2.72-2.1-2.67-3.71-7.54-1.55-10.83 1.07-1.6 2.78-2.62 4.7-2.65 1.47-.03 2.85 1.01 3.92 1.01 1.06 0 2.88-1.26 4.86-1.08.83.03 3.15.33 4.64 2.5-3.93 2.11-3.3 7.63.98 7.97z"/>
-    </svg>
-    <div class="leading-tight">
-      <div class="text-[10px] uppercase tracking-wider">Download on the</div>
-      <div class="text-lg font-semibold -mt-0.5">App Store</div>
-    </div>
-  </a>
-
-  <!-- Google Play -->
-  <a href="#" aria-label="Get it on Google Play"
-     class="inline-flex items-center gap-3 rounded-[14px] bg-black text-white px-4 py-3 shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-black/40">
-    <!-- Google Play mark -->
-    <svg width="28" height="28" viewBox="0 0 512 512" class="shrink-0" aria-hidden="true">
-      <path fill="#34a853" d="M325.3 215.5 79.2 20.7C69.7 14.1 59.5 12 50.5 14.4l245.4 205.9 29.4-4.8z"/>
-      <path fill="#4285f4" d="M461.8 246.9c10.3 5.9 10.3 20.4 0 26.2L375 323.3 295.9 256 375 188.7l86.8 58.2z"/>
-      <path fill="#fbbc04" d="M50.5 497.6c9 .4 19.2-1.7 28.7-8.3l246.1-195.5-29.4-37.8L50.5 497.6z"/>
-      <path fill="#ea4335" d="M50.5 14.4c-6.7 1.8-12.6 6.1-16.8 12.8C29.6 36.2 28 45 28 55.4v401.2c0 10.4 1.6 19.2 5.7 28.2L295.9 256 50.5 14.4z"/>
-    </svg>
-    <div class="leading-tight">
-      <div class="text-[10px] uppercase tracking-wider">Download on the</div>
-      <div class="text-lg font-semibold -mt-0.5">Google Play</div>
-    </div>
-  </a>
-</div>
-
-    </div>
+        <div class="mt-6">
+          <button
+            id="notifyOpenBtn"
+            type="button"
+            class="inline-flex items-center gap-2 rounded-[999px] bg-gradient-to-r from-rose-500 to-pink-500 text-white px-6 py-3 text-sm sm:text-base font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-rose-400/70"
+          >
+            Anunță‑mă când lansați
+            <span aria-hidden="true">➜</span>
+          </button>
+        </div>
+      </div>
 
       <!-- Mockup phone -->
        <div class="relative mx-auto w-full max-w-[14rem] sm:max-w-[16rem] lg:max-w-[18rem]">
@@ -260,6 +239,71 @@
     </div>
   </section>
 
+  <!-- Notify me Modal -->
+  <div id="notifyModal" class="fixed inset-0 z-50 hidden">
+    <!-- Overlay -->
+    <div id="notifyOverlay" class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Dialog -->
+    <div class="relative mx-auto mt-24 w-full max-w-md px-4">
+      <div class="rounded-2xl bg-white p-6 shadow-xl">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-semibold">Fii primul care află</h2>
+            <p class="mt-1 text-sm text-gray-600">
+              Lasă-ne adresa ta de email și te anunțăm când EMOTI este gata de descărcat.
+            </p>
+          </div>
+          <button
+            id="notifyCloseBtn"
+            type="button"
+            class="rounded-full p-1 text-gray-400 hover:text-gray-600 hover:bg-gray-100"
+          >
+            <span class="sr-only">Închide</span>
+            &times;
+          </button>
+        </div>
+
+        <!-- Formspree form -->
+        <form
+          action="https://formspree.io/f/xgvgyzkd"
+          method="POST"
+          class="mt-4 space-y-4"
+        >
+          <label class="block text-sm font-medium text-gray-700">
+            Email
+            <input
+              id="notifyEmail"
+              type="email"
+              name="email"
+              required
+              placeholder="tu@exemplu.com"
+              class="mt-1 block w-full rounded-xl border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-rose-500 focus:ring-rose-500"
+            />
+          </label>
+
+          <!-- Optional: mesaj default ca să știi de unde vin -->
+          <input
+            type="hidden"
+            name="message"
+            value="Notify me când lansați aplicația EMOTI"
+          />
+
+          <button
+            type="submit"
+            class="w-full inline-flex justify-center items-center gap-2 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 px-4 py-2.5 text-sm font-semibold text-white shadow-md hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-rose-400/70"
+          >
+            Mă anunți când lansați
+          </button>
+        </form>
+
+        <p class="mt-3 text-[11px] text-gray-400">
+          Fără spam. Folosim emailul doar pentru notificarea de lansare.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="py-12">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -274,8 +318,46 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    const notifyBtn = document.getElementById('notifyOpenBtn');
+    const notifyModal = document.getElementById('notifyModal');
+    const notifyCloseBtn = document.getElementById('notifyCloseBtn');
+    const notifyOverlay = document.getElementById('notifyOverlay');
+    const notifyEmailInput = document.getElementById('notifyEmail');
+
+    function openNotifyModal() {
+      notifyModal.classList.remove('hidden');
+      // focus pe input
+      setTimeout(() => {
+        if (notifyEmailInput) notifyEmailInput.focus();
+      }, 50);
+
+      // dacă vrei tracking:
+      if (window.posthog) {
+        posthog.capture('notify_modal_opened');
+      }
+    }
+
+    function closeNotifyModal() {
+      notifyModal.classList.add('hidden');
+    }
+
+    if (notifyBtn) {
+      notifyBtn.addEventListener('click', openNotifyModal);
+    }
+    if (notifyCloseBtn) {
+      notifyCloseBtn.addEventListener('click', closeNotifyModal);
+    }
+    if (notifyOverlay) {
+      notifyOverlay.addEventListener('click', closeNotifyModal);
+    }
+
+    // Escape pentru închiderea modalului
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !notifyModal.classList.contains('hidden')) {
+        closeNotifyModal();
+      }
+    });
   </script>
 </body>
 </html>
-
 
